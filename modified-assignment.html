@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    Anil's Portfolio
+  </title>
+  <style>
+	   /*psuedo-element
+	to mark the text in yellow and background color red
+	when the text is selected using mouse
+	*/
+	::selection {
+	  background-color: red;
+	  color: yellow;
+	}
+	/* CSS element selectors, id selectors, and class selectors */
+	.header {
+	  margin: 0;
+	  padding: 20px;
+	  background-color: rgb(10, 25, 51);
+	  height: 60px;
+	}
+	.header-text {
+	  position: absolute;
+	  left: 350px;
+	  font-size: 24px;
+	  font-weight: bold;
+	  color: rgb(51, 255, 153);
+	}
+	nav {
+	  display: block;
+	  float: right;
+	  font-size: 12px;
+	}
+	.header-link-ul {
+	  list-style: none; /* to eliminate bullets */
+	  /* text-decoration: none;
+	  color: red;
+	  font-size: 11px; */
+	}
+	.header-link-ul li {
+	  display: inline;
+	}
+	.header-links {
+	  font-size: 12px;
+	  color: rgb(255, 102, 178);
+	}
+	a {
+	  padding: 6px;
+	}
+	a:hover {
+	  color: rgb(255, 255, 51); /* color link element when mouse over*/
+	  font-size: 15px; /* increase font size on mouse over */
+	}
+	.introduction {
+	  margin: 0;
+	  padding: 20px;
+	  text-align: center;
+	  background-color: rgb(51, 255, 153);
+	  color: rgb(256, 256, 256);
+	}
+	.introduction-image {
+	  width: 600px;
+	  height: 400px;
+	}
+	.section-heading-text {
+	  text-align: center;
+	  font-weight: bold;
+	  color: rgb(0, 0, 51);
+	  text-decoration: underline;
+	  font-size: 26px;
+	}
+	.footer-text {
+	  text-align: center;
+	  color: rgb(204, 0, 0);
+	  font-size: 14px;
+	  margin-top: 10px;
+	  margin-bottom: 10px;
+	}
+	h3 {
+	  font-family: fantasy;
+	  color: blue;
+	  font-weight: bold;
+	}
+	h4 {
+	  font-family: Helvetica;
+	  color: rgb(204, 102, 0);
+	}
+	h5 {
+	  font-family: serif;
+	  color: black;
+	}
+
+	.portfolio {
+	  margin: 0;
+	  padding: 20px;
+	  background-color: rgb(256, 256, 256);
+	  height: 500px;
+	}
+	.portfolio-pic {
+	  float: right;
+	  width: 350px;
+	  height: 150px;
+	  border: solid 2px black;
+	  margin-left: 12px;
+	}
+	.portfolio-sidebar {
+	  float: left;
+	  margin: 2px;
+	  padding: 10px;
+	}
+	.portfolio-text {
+	  font: italic 15px cursive;
+	  height: 150px;
+	}
+	.project-title {
+	  color: rgb(255, 51, 51);
+	  font-size: 20px;
+	  font-family: fantasy;
+	  font-weight: bold;
+	}
+	.project-description {
+	  color: rgb(102, 102, 255);
+	  font-size: 18px;
+	  font-family: Helvetica;
+	  font-weight: bold;
+	  padding-top: 10px;
+	}
+	#about {
+	  margin: 0;
+	  padding: 20px;
+	  text-align: center;
+	  background-color: rgb(51, 255, 153);
+	  color: rgb(256, 256, 256);
+	}
+	article {
+	  -webkit-columns: 2 50px;
+	  -moz-columns: 2 50px;
+	  columns: 2 50px;
+	  -webkit-column-gap: 55px;
+	  -moz-column-gap: 55px;
+	  column-gap: 55px;
+	}
+	p {
+	  text-align: justify;
+	  margin-bottom: 1.3em;
+	  font: italic 15px cursive;
+	  color: black;
+	}
+	p.about-text::first-letter {
+	  font-size: 200%;
+	  color: red; /* pseudo element to have first letter of the paragraph in big size*/
+	}
+	.contact-me {
+	  margin: 0;
+	  padding: 20px;
+	  text-align: center;
+	  background-color: rgb(256, 256, 256);
+	}
+	.around-the-web {
+	  margin: 0;
+	  padding: 20px;
+	  background-color: rgb(0, 25, 51);
+	  color: rgb(256, 256, 256);
+	  text-align: center;
+	}
+	.social-network-logo {
+	  width: 30px;
+	  height: 30px;
+	}
+	.copyright {
+	  margin: 0;
+	  padding: 20px;
+	  background-color: rgb(0, 50, 61);
+	  color: rgb(256, 256, 256);
+	  text-align: center;
+	}
+
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-text">
+      ANIL KUMAR MULA
+    </div>
+    <nav>
+      <!-- top right corner links in the page-->
+      <ul class="header-link-ul">
+        <li>
+          <a class="header-links" href="#portfolio">
+            PORTFOLIO
+          </a>
+        </li>
+        <li>
+          <a class="header-links" href="#about">
+            ABOUT
+          </a>
+        </li>
+        <li>
+          <a class="header-links" href="#contact">
+            CONTACT
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- There are several sections in the page like introduction, portfolio,  about -->
+  <main>
+    <!-- main document starts here -->
+    <section class="introduction">
+      <img class="introduction-image"
+        src="https://www.bitdegree.org/tutorials/wp-content/uploads/2018/08/what-is-a-web-developer.jpg"
+        alt="photo of web developing tools"><br>
+      <h5>
+        HI, I'M ANIL, I BUILD USER INTERFACES & I'M BASED IN
+      </h5>
+      <h3>
+        COPENHAGEN
+      </h3>
+      <h4>
+        WEB DEVELOPER
+      </h4>
+    </section>
+    <section class="portfolio">
+      <div id="portfolio" class="section-heading-text">
+        PORTFOLIO
+      </div>
+      <div class="project-title">
+        bookmyshow.com
+      </div>
+
+      <div class="project-description">
+        Project Description
+      </div>
+      <p class="portfolio-text">
+        <img class="portfolio-pic"
+          src="https://prnewswire2-a.akamaihd.net/p/1893751/sp/189375100/thumbnail/entry_id/0_stdwzazg/def_height/500/def_width/500/version/100012/type/1"
+          alt="first project">
+        BookMyShow is India's largest <strong>online entertainment ticketing </strong>platform that allows users
+        to book tickets for <strong>movies, plays, sports and live events </strong>through its website, mobile app
+        and mobile site. It sells tickes for anything and everything that has to do with entertainment.
+      </p>
+      <div class="project-title">
+
+        naukri.com
+
+      </div>
+      <div class="project-description">
+        Project Description
+      </div>
+      <p class="portfolio-text">
+        <img class="portfolio-pic" src="https://avatars1.githubusercontent.com/u/1309365?s=460&v=4"
+          alt="second project">
+        Naukri.com is widely used by <strong>recruiters </strong>and head hunters to <strong>meet their hiring
+          needs</strong>. As you might know, not every job opportunity is posted on the internet publicly. In
+        fact, most of the best opportunities are never posted on any job board or newspaper
+
+      </p>
+    </section>
+    <section id="about">
+      <div class="section-heading-text">ABOUT</div>
+      <article>
+        <p class="about-text">
+          I am a web developer with 5 years of experience in developing user interfaces and i am living in copenhagen .
+          I am specialized in writing efficient CSS, and JavaScripts. I worked for majour projects like
+          "bookmyshow.com", "naukri.com", "rainbowhospitals.com" and many more.
+        </p>
+        <p>
+          I can say that i am responsible and hardworking. I have the ability to analyze, design and implement the user
+          interfaces with latest technologies. I have developed hundreds of webpages trough out my career.
+        </p>
+        <p>
+          I am extremely motivated, keep on updated and grow professionally. I have experience in a variety of
+          technologies including C, C++, Java, Python and databases like SQL, MySql and MangoDB
+        </p>
+
+      </article>
+
+    </section>
+
+  </main>
+  <!-- footer element contains contact and copy right information. -->
+  <!-- there can be seveal footer elements in a document.-->
+  <footer class="contact-me" id="contact">
+    <div class="section-heading-text"> CONTACT ME </div>
+    <div class="footer-text"> You can contact me by sending email to this email:</div>anilreddymula@gmail.com
+  </footer>
+  <footer class="around-the-web">
+    Around the web
+    <!-- we can include more social networking logos here -->
+    <div>
+      <!-- Facebook logo here-->
+      <a href="https://facebook.com/ "><img class="social-network-logo"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALYAAAC2CAMAAABDLoc2AAAAhFBMVEUYd/L///8QcvKYwvm21PsZfPwmgPPm8P0gfPPX5/wYefUYePORvvkZevjc6v0VdfLz+P8vhPO71/vw9v46i/Slyvr6/P/r8/7T5fzL4Pyexvrj7v1+s/hOl/VkpPdwq/fC2/uEt/hYnfZGkvRjpPg2ivev0PsqgvOMu/lJlPVuqvh3r/dQv13/AAAJdElEQVR4nNXd6ZaiOhAAYECDGDqNC+K+4tb6/u93w6KChpAKFbxTv+bMjN2fOUUSslr2PxmWkZ8aRYM8osjIL0BlR9PZaHHdHtdxOMwjjNeb+3Wy649R/Vjs6Ld73cQXjxEejDGaB/9j+jfeML79jJZYdgz2YNbZhAmYUd+qCP4F+L+78XbSx6A3Zi/Pt9BLxFXgEp7bvfjenX6X3ZscXEaUxM/wGWHDzbmZvAF73D26BGh+lDqXb3cNskWbPdufoOX8Jqfxz7JddjQ6ek3MWTDi3ubtsaPzmjZHZ0XuH0btsKNJzBiGOQ2fUB04mN39I3joNDh8Z5g9PyCWdAF++zXI7m09go+2klRxr2ND7GhywnkQRUFJDElxdXb/oNaA6wbztz10drRwzeTHK3xy6iKzl0ezRZ0Fo/cBJnt0Ml3UWfgknqGxo6tnoNYTB3MnSOzpxlwF8hmUrhR6hvXsftxOgjzCJ4f6vngtezRsV82DhLUJXseetJfWr2DDuk5KDbtDW0zrgtutqcHl7Ot31PzB9OQVipS9b7MKeXNTqVvG3rPKYY9vuyXsPfmiusZdzf7S01hwe9XPZSV78m01d7uV9WAVe+R9XZ3U31XtTgV7dvlCK/MZJKxo58XsXvi/UHP3QdwBF7Kjg5l+SJBG8gd1912dvcdWB44T+O4ln2G4uJ7lJMG/Qu0XYMJqUMQ+o2ZI4ARuvO2M5stxNp0zni5nu9G5c78dwovHv5H049QVDRMK2L9DxErECU73buXcRzTujyZbeavGYkF6f7KjNV6KON5mVPtSu/TkmSJK70/2D5ra8e79OjOP3xq2RT9byw/2DKudCYKj2lt4LZudPsZ93tloKeJclF7BVdgWudWxsVLE+VPJD0W2/5Emb+xfFydFnI3i8JIS22Lh23jsG3uDU9jODTALpsC2yF7GHiGVNUStxKZuOedK7ChGaR+div5PA7ZFNtXsBUqKBEPYdKMS26elV4Yie3zCKOwgAM58KbEtsi4mXpGNU/k5W5hakV1uKwvsKUoXKrioT2WA2OyvUNwFdgensDtAtSrbYoXke7HHKC9iwQk0UQdhk4OIPcEp7CtUrcy2CpXJk41UZ3vA6VwIu9CjerJ3KA2kcwSrAaXtPsvkyd7gNJBng2yLPDPQen4WpbRdaO0HYrPw0Wt4sHGamuBQZZNE3btkIeijDszZWJ0olXok+t1NOoXY+8rsZ4cqZ89xhrKD+knz3TbMB3eeof7z6WVaYq9wXg+8ur7fbm05gfpQ2keQSZEd4QxVBid5RztaWYCiFbKPRTZSjjjyJzK6OQ0KOg2ad9Qy9hXrFVLKXjUs6iTYucBe4wxWOiuZetQkqR+RN/Ape4k0EiXttEYxgpq3ONGTjTUyLG3auxhqXlnNnuw71lCUjL1ByGwepPNgIzWRnC1pbcZDnNLOGsqEvUQaQZOykerYPLkT9ghr0kPGPuPkiOV7/ZyNNhAvYy+Q2Bbr5uxjG+wOFjsdxbTQOiRWW+xjxu5hPZHtsNNn0sJ7xltip70pzj7jTY21wbb8ecpGnNFrhZ1UJZy9/cfYSfNuIdZ/bbH3KfsPbWVAS+xbwo5CtJUBLeX2IWGPL/8a+y9ho/X/WmPz9say+3hr0Nph0+GAs9GWNLTHHnP2HOvHtcZ2e/8me6nL9lxReJKJ1IX4I/xD7bGdfU8YkhUCA/Enej3wG30D9k+1DxoHPfbuu+wohA5E5KWtUQEisnsu9JcnY/N69TYiG/5ulTU3OuOWiGz4+AlNG/epRp8Ekf0DZrM4YQ9OX2XDRzSzjqvOwCUiew0e0UwGL/nbzeGbbI2B2GSpLmff4O+SeGz1mesX+ydla6yNx2OPwL/bIueUrbH+BY+tMRBLs+EdjZUkeGz4pF+6qsTSWpOBxwZ3pHhrM0jZGhU3Gltj1i+pttNhefguGzQ2vCOVbVVI2PDlDWjsGXyQOl3kkLDhI8Vo7DN81i8ZJ07ZfQ/6ndHY8I5UMtyQT6eCJ2/Q2DcwO1t7mU5eg5f2o7E1OlLXJxu83ByLPTiB2dmK0ZQ984HJjcWGd6Sy1M7Y4OTGYs/hOZItlspW70BXZjj3vjAkK7zGov9/hT+RiwIbvFjA90RhyebcLcEH4G/t+YrljD0Gr+8PRCEfuhR8AKq2WL6xIl++qPGGIwjzI64kf6hydhdniatpNvX6JbbOqMNnGGeztV1i4yxyNc5+LHF9sufQFkcUptnUfRwy8GBHGAsvTbPJcwPVc28Cxv4V46X93PL+ZMOr7tbZ7LUb7rVdCGFVsWn2a1Hni40wiW2W/doHUtoK13ylq1l23ot6ZzeffDfKpsVNdsVtno1XHxllk+Li8CK78SZ3k+zyVvfSFuamLbxJNimdrVBi9xrW3QbZyTxTFbvpvlqDbFpehVBmD5qtmzfHftud/36Gw6j6UPtvsgsbPIXsZm9nxtjkfYDjnd3oqTTFLm1xF7Ib7cExxKbexxlNn0cGNTiixBCbfG4e/WT39A+gMMMuHzpRxW5Qmxhhv5+oUsXWPzLNCFt4aJqIrX1AnQk2EW5mFJ5Qt9RMbwNsshaO4oqPMdRZ9mWEzU7iTdEVh0ZOtA43R2dXHtJZdUSn1ns8NpvSqg2YlQei6rwQI7N9VrlJt5IdabSWyOz3o7tU2PZAYwUBKrvidM4atj0Gu1HZ5C5Znyw7ERrsxmRL1VI22I3IJlvpaXHy084HsOcSjU3ZXn7GXc3Z8tEdcuA5FpvSulnm2gsIIMfLI7FZzcHyKmzIFQQ4bHKqu35A6XKNnfI9Jihs8qdwopYC214eFBMcgU3ZTeXQNRW2He2pUqI0ZzNvUf0joGzb7iolSlO2T2LFW+IU2fZyo9ADb8hm/kr1bE9VNq9R6q9iacSmJFQ/JFOdbS9vdRnehE28FeAARACbZ3gor1L02YytQXcfgtj24Ocig+uyeX5MYHdkwtg8U+6SiyX12JQMYTfZabBtu3+rhOuwKXH38Es94Wzbnm1dMRzOZmS4h5+Oqce27d/VUHTLJJDtMxb+aBzXqM227eki9j+KHMRmxDucQUdHF0KXzTsqu/vw7a5adTYlNNyrnZgvDH02j+l5U5KrsX3+kdO2/j4FWTRi24n8FvqPS43r2T4lxA/vI/CJwG/RlM1jMO8cT35y7bWcnV54HW4WM4S7uhHYSYxnk/t6KDswvGOdDquzbM0xJJDYaYxnkjv/eljiNDDZLcY/yv4P/7akw+OiFy4AAAAASUVORK5CYII="
+          alt="Facebook logo">
+        <!-- Linkedin logo here-->
+      </a>
+      <a href="https://www.linkedin.com/"><img class="social-network-logo"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCFp70Kezi0jRaJL3v9obZWGF7k4N9unYZzdgPWQl1HRxlshP1"
+          alt="linkedin logo"></a>
+      <!-- Twitter logo here-->
+      <a href="https://twitter.com/"><img class="social-network-logo"
+          src="data:image/jpeg;base64,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"
+          alt="twitter logo">
+
+      </a>
+      <!-- youtube logo here-->
+      <a href="https://www.youtube.com"><img class="social-network-logo"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKkAAAB3CAMAAABPP5BCAAAAb1BMVEX/AAD/////+Pj/+/v/HR3/4+P/wcH/ExP/Dg7/yMj/4OD/urr/kJD/e3v/UVH/T0//Jib/QED/Zmb/n5//7u7/29v/PDz/Nzf/MjL/0ND/bGz/YmL/Wlr/rq7/6Oj/gYH/SEj/qKj/mJj/dHT/iopn5s/OAAAEAElEQVR4nNWc6ZaiMBCFk7BGFlEIi4RV3/8ZB7SdRkRkxpJQ92+fk/6aDkWlqnIJXSjGotIQIss456bjFGEYupfK885HKaW/r+MkDXTdsmybXGXblqUHQZoc6r0v5fF09rzKbcOwKRzT7BbJhNiVJWNLAcjMzzTGysws2up0zKVfH5JUtwicbD1I49qX+fHktY2TGYxp/0y66/g8mQJiLVOwP7uFIyaf8xOpJhqZBKszDqWn8YVH70iLXCnkryyPz5E6umrAoQ7mK1ImVbONdWGTpCbkiw0lMUHqqIaalM2fSLcJ2skckXJbNdFLiQdSpjaCziqNhqRbiaKTygekpmqYefFf0g3/73vV7E662ff+LvOHVDuqJnkn/4d0pxrkrXRxIy1Ug7xXcSPdXGLyrPONdP3c/p8VaD2p2FRS+kJRT7r5GNXL7ElD1RRL5PaknmqKJco7Um2vmmKJfI1QphpikZKS0Eg1xCJZglChGmKZOMERpLowRXAEKUIagiNIdQGV0M0npzedCUAmtcoBfE8YQODPVsgbAxIdPl9Fo80KNS0DIDvtjo6a+/XcESI7vdYOxberGxnAGj9VTu4DrPVaHGCNez2WNd8scUCSUhpdAJZ7IYiS1LArszsBLDgpiATlsX/kfGkLNABrjDtd39muEKnUU0/OqABWHcsFWGOie5jBJz4Qf/1Un1MzY4CVh4JIT6c73ww4R4cIKq969BHodoX4Wr+eJsgAMrW7IL7Vc3MPDth2/TYpjVqA39CrBljjzSyJAXOoTADWeDv1kkHUviA+fAvmcwDSC4hDxZJJIuZ+etSCOKotm3n69PgCcVhfOp0Fsl1XIaWsUNz9WEzaHQnUNpPXeaZr7lP+0T7F8+7jiad4vlF4vvs1wBrr5FJ48lM8OT+ecxSesyme8z6eGgqeuhSeWh+e+imemjSeOj+e3gmefhSeHh+evimeXjSW/r6NZmYiRjOHItHM9lSEnlUzLFOLZgatQDPXx9HMSmZY5k91gWWmN46wzEnLfvYcRZg6opnnb3HdkcBz7wTDXR5dQ3Y/Cs+ds+3f47MyLHcja4rlvqlzJ6Ubj1NJRJHci+4fKYq75gc6IGUb/v/r5ZB0y54IP/YN2/eZCOmIdJsmI4Q09ImU8i36DfzazDy44Xyt8P2/OpZ0mpRm0N2uj6QXQ7+psRcS97YSBGTxSPbshBXx6pCqDa9BIkNj3OSa9uxiojft8td/xVLphQXfTTHN+aD1RmhGZjZtdcpzud/HSQBqhGbpVz83meenqi1MUc4aoc2SPj5nFpW7v+ZyRROGrVtVnnfKpfSvfm5Bby439paLe2+53pat95a7uG3vLedcveUyIYwyWmwu9wfy3zH+XMEagwAAAABJRU5ErkJggg=="
+          alt="youtube logo"></a>
+    </div>
+  </footer>
+
+  <footer class="copyright">
+    <h6 class="footer-text">
+      copyright@ANIL KUMAR MULA
+    </h6>
+
+  </footer>
+</body>
+
+</html>
